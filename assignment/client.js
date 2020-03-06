@@ -1,6 +1,7 @@
 console.log('js');
 
-let totalSalary = 12000000100;
+let totalSalary = 12100;
+let monthlySalary = Math.round(totalSalary/12);
 
 $(readyNow);
 
@@ -8,6 +9,7 @@ function readyNow() {
     console.log('jQ');
     $('#btn-submit').on('click', addToTable);
     $('.btn-table').on('click', deleteTableRow);
+    $('h3').text(`Total Monthly Salary: $${monthlySalary}`);
 }
 
 // Adds the items from the inputs to the table below
@@ -37,30 +39,51 @@ function addToTable( event ) {
         $('#in-salary').val('');
 
         // Adds the values to the table
-        $('#main-table').append(`<tr id="${firstName}-${id}" ><td>${firstName}</td><td>${lastName}</td><td>#${id}</td><td>${title}</td><td class="salaryCell">$${salary}</td><td><button type="button" class="btn-table" id="${firstName}-${id}">Delete</button></td></tr>`);
+        $('#main-table').append(`<tr id="${firstName}-${lastName}-${id}" ><td>${firstName}</td><td>${lastName}</td><td>#${id}</td><td>${title}</td><td class="salaryCell">$${salary}</td><td><button type="button" class="btn-table" id="${firstName}-${lastName}-${id}">Delete</button></td></tr>`);
         $('.btn-table').on('click', deleteTableRow);
         // Adds value to the total value
         totalSalary += Number(salary);
-        $('h3').text(`Total Salary: $${totalSalary}`);
+        monthlySalary = Math.round(totalSalary / 12);
+
+        // Update the text on the DOM
+        $('h3').text(`Total Monthly Salary: $${monthlySalary}`);
+
+        // If the salary is too big turn the salary RED
+        if (monthlySalary > 20000) {
+            $('h3').addClass('red');
+        } else {
+            // It wasn't over 20k so this ensures it isnt red
+            $('h3').removeClass();
+        }
 
     }// Ends if all filled
     
 }
 
 function deleteTableRow(event) {
-    console.log('event:', event.target.id);
+
+    // Find the buttons id
     let eventID = event.target.id;
     let eventLine = $(`#${eventID}`);
 
     eventLine.each(function () {
+
+        // Find and update the salary
         let salary = $(this).find(".salaryCell").html();
         salary = Number(salary.slice(1));
-        console.log('salary', salary);
         totalSalary -= salary;
-        console.log('total salary', totalSalary);
-
+        monthlySalary = Math.round(totalSalary / 12);
         
-        $('h3').text(`Total Salary: $${totalSalary}`);
+        // Update the text on the DOM
+        $('h3').text(`Total Monthly Salary: $${monthlySalary}`);
+
+        // If the salary is too big turn the salary RED
+        if(monthlySalary > 20000){
+            $('h3').addClass('red');
+        } else {
+            // It wasn't over 20k so this ensures it isnt red
+            $('h3').removeClass();
+        }
         
     });
 
