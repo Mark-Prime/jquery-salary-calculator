@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css" />
     <script src="jquery-3.4.1.min.js" ></script>
+    <script src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
     <script src="client.js" ></script>
     <header>
         <h1>Salary Calculator</h1>
@@ -15,15 +17,32 @@
     <main class="container">
         <form class="add-employee">
             <h2>Add Employee</h2>
-            <input type="text" id="in-firstname" placeholder="First Name">
-            <input type="text" id="in-lastname" placeholder="Last Name">
-            <input type="text" id="in-id" placeholder="ID">
-            <input type="text" id="in-title" placeholder="Title">
-            <input type="text" id="in-salary" placeholder="Annual Salary"><br />
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">First Name</span>
+                </div>
+                <input type="text" aria-label="First name" id="in-firstname" class="form-control">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Last Name</span>
+                </div>
+                <input type="text" aria-label="Last name" id="in-lastname" class="form-control">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">ID</span>
+                </div>
+                <input type="text" aria-label="ID" id="in-id" class="form-control">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Title</span>
+                </div>
+                <input type="text" aria-label="Title" id="in-title" class="form-control">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">Salary</span>
+                </div>
+                <input type="text" aria-label="Salary" id="in-salary" class="form-control">
+            </div>
             <button type="submit" id="btn-submit" >Submit</button>
         </form>
 
-        <table>
+        <table class="table table-striped">
             <thead>
                 <tr>
                     <th>First Name</th>
@@ -31,14 +50,7 @@
                     <th>ID</th>
                     <th>Title</th>
                     <th>Annual Salary</th>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
+                    <th></th>
                 </tr>
             </thead>
             <tbody class="main-table" id="main-table">
@@ -67,14 +79,6 @@
                         <td><button type="button" class="btn-table" id="Justin-01219">Delete</button></td>
                     </tr>
             </tbody>
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
         </table>
 
         <h3 id="Salary">Total Salary: $12000000100</h3>
