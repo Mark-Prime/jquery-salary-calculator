@@ -14,15 +14,50 @@
 <body>
     <form class="add-employee">
         <h2>Add Employee</h2>
-        <input type="text" id="in-fname" placeholder="First Name">
-        <input type="text" id="in-lname" placeholder="Last Name">
+        <input type="text" id="in-firstname" placeholder="First Name">
+        <input type="text" id="in-lastname" placeholder="Last Name">
         <input type="text" id="in-id" placeholder="ID">
         <input type="text" id="in-title" placeholder="Title">
         <input type="text" id="in-salary" placeholder="Annual Salary"><br />
-        <button type="submit">Submit</button>
+        <button type="submit" id="btn-submit" >Submit</button>
     </form>
 
+    <table>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Annual Salary</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <div class="table-body">
+                <!--- <tr> 
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>ID</td>
+                    <td>Title</td>
+                    <td>Annual Salary</td>
+                </tr> --->
+            </div>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </thead>
+    </table>
 
+    <h3>Total Salary: $<div class="total-salary">0</div></h3>
     
 </body>
 </html>

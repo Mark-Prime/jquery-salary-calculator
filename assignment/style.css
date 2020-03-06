@@ -20,3 +20,21 @@ button {
     font-size: large;
     margin-top: 15px;
 }
+
+table{
+    margin-top: 70px;
+    width: 100%;
+}
+
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+.total-salary {
+    display: inline;
+}
+
+h3 {
+    float: right;
+}
