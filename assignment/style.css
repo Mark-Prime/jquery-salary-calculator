@@ -1,0 +1,22 @@
+h1 {
+    background-color: aquamarine;
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+body {
+    background-color: azure;
+}
+
+input {
+    font-size: large;
+    display: inline-table;
+    width: 19.5%;
+}
+
+button {
+    float: right;
+    font-size: large;
+    margin-top: 15px;
+}
