@@ -1,8 +1,15 @@
 h1 {
-    background-color: aquamarine;
-    margin: 0px;
-    padding: 0px;
     text-align: center;
+    font-style: italic;
+    margin: 0;
+    margin-bottom: 1em;
+    padding: 0.25em;
+}
+
+header {
+    background-color: aquamarine;
+    margin-bottom: 1em;
+    width: 100%;
 }
 
 body {
@@ -12,7 +19,7 @@ body {
 input {
     font-size: large;
     display: inline-table;
-    width: 19.5%;
+    width: 19%;
 }
 
 button {
@@ -41,4 +48,11 @@ h3 {
 
 .table-body {
     background-color: violet;
+}
+
+.btn-table {
+    float: none;
+    font-size: unset;
+    margin-top: 0px;
+    box-align: center;
 }

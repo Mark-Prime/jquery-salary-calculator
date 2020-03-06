@@ -12,52 +12,72 @@
     </header>
 </head>
 <body>
-    <form class="add-employee">
-        <h2>Add Employee</h2>
-        <input type="text" id="in-firstname" placeholder="First Name">
-        <input type="text" id="in-lastname" placeholder="Last Name">
-        <input type="text" id="in-id" placeholder="ID">
-        <input type="text" id="in-title" placeholder="Title">
-        <input type="text" id="in-salary" placeholder="Annual Salary"><br />
-        <button type="submit" id="btn-submit" >Submit</button>
-    </form>
+    <main class="container">
+        <form class="add-employee">
+            <h2>Add Employee</h2>
+            <input type="text" id="in-firstname" placeholder="First Name">
+            <input type="text" id="in-lastname" placeholder="Last Name">
+            <input type="text" id="in-id" placeholder="ID">
+            <input type="text" id="in-title" placeholder="Title">
+            <input type="text" id="in-salary" placeholder="Annual Salary"><br />
+            <button type="submit" id="btn-submit" >Submit</button>
+        </form>
 
-    <table>
-        <thead>
+        <table>
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Annual Salary</th>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </thead>
+            <tbody class="main-table" id="main-table">
+                    <tr id="Stephen-90210"> 
+                        <td>Stephen</td>
+                        <td>Semprevivo</td>
+                        <td>91210</td>
+                        <td>Arrested</td>
+                        <td class="salaryCell">$0</td>
+                        <td><button type="button" class="btn-table" id="Stephen-90210">Delete</button></td>
+                    </tr>
+                    <tr id="Bill-2148">
+                        <td>Bill</td>
+                        <td>Gates</td>
+                        <td>2148</td>
+                        <td>Microsoft Founder</td>
+                        <td class="salaryCell">$12000000000</td>
+                        <td><button type="button" class="btn-table" id="Bill-2148">Delete</button></td>
+                    </tr>
+                    <tr id="Justin-01219">
+                        <td>Justin</td>
+                        <td>Namustin</td>
+                        <td>01219</td>
+                        <td>Celebrity Heart Throb</td>
+                        <td class="salaryCell">$100</td>
+                        <td><button type="button" class="btn-table" id="Justin-01219">Delete</button></td>
+                    </tr>
+            </tbody>
             <tr>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>ID</th>
-                <th>Title</th>
-                <th>Annual Salary</th>
-            </tr>
-            <tr>
+                <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td></td>
             </tr>
-        </thead>
-        <tbody class="container">
-                <!---<tr> 
-                    <td>First Name</td>
-                    <td>Last Name</td>
-                    <td>ID</td>
-                    <td>Title</td>
-                    <td>Annual Salary</td>
-                </tr>--->
-        </tbody>
-        <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-        </tr>
-    </table>
+        </table>
 
-    <h3 id="Salary">Total Salary: $0</h3>
-    
+        <h3 id="Salary">Total Salary: $12000000100</h3>
+    </main>
 </body>
 </html>
