@@ -1,5 +1,7 @@
 console.log('js');
 
+let totalSalary = 0;
+
 $(readyNow);
 
 function readyNow() {
@@ -32,6 +34,14 @@ function addToTable( event ) {
         $('#in-id').val('');
         $('#in-title').val('');
         $('#in-salary').val('');
+
+        // Adds the values to the table
+        $('.container').append(`<tr><td>${firstName}</td><td>${lastName}</td><td>#${id}</td><td>${title}</td><td>$${salary}</td></tr>`)
+
+        // Adds value to the total value
+        totalSalary += Number(salary);
+        $('h3').text(`Total Salary: $${totalSalary}`);
+
     }// Ends if all filled
     
 }
