@@ -1,7 +1,7 @@
 console.log('js');
 
 let totalSalary = 12100;
-let monthlySalary = Math.round(totalSalary/12);
+let monthlySalary = totalSalary/12;
 
 $(readyNow);
 
@@ -9,7 +9,7 @@ function readyNow() {
     console.log('jQ');
     $('#btn-submit').on('click', addToTable);
     $('.btn-table').on('click', deleteTableRow);
-    $('h3').text(`Total Monthly Salary: $${monthlySalary}`);
+    $('h3').text(`Total Monthly Salary: $${Math.round(monthlySalary)}`);
 }
 
 // Adds the items from the inputs to the table below
@@ -28,7 +28,7 @@ function addToTable( event ) {
     // Ensures no values are blank
     if (!firstName || !lastName || !id || !title || !salary) {
         // Alerts user to fill in all boxes
-        alert('Please fill in all boxes')
+        alert('Please fill in all boxes');
 
     } else{ //If all values are filled in
         // Clears the inputs for further use
@@ -43,10 +43,10 @@ function addToTable( event ) {
         $('.btn-table').on('click', deleteTableRow);
         // Adds value to the total value
         totalSalary += Number(salary);
-        monthlySalary = Math.round(totalSalary / 12);
+        monthlySalary = totalSalary / 12;
 
         // Update the text on the DOM
-        $('h3').text(`Total Monthly Salary: $${monthlySalary}`);
+        $('h3').text(`Total Monthly Salary: $${Math.round(monthlySalary)}`);
 
         // If the salary is too big turn the salary RED
         if (monthlySalary > 20000) {
@@ -72,10 +72,10 @@ function deleteTableRow(event) {
         let salary = $(this).find(".salaryCell").html();
         salary = Number(salary.slice(1));
         totalSalary -= salary;
-        monthlySalary = Math.round(totalSalary / 12);
+        monthlySalary = totalSalary / 12;
         
         // Update the text on the DOM
-        $('h3').text(`Total Monthly Salary: $${monthlySalary}`);
+        $('h3').text(`Total Monthly Salary: $${Math.round(monthlySalary)}`);
 
         // If the salary is too big turn the salary RED
         if(monthlySalary > 20000){
