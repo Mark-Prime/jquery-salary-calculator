@@ -35,10 +35,5 @@ How does someone use this application? Tell a user story here.
 - jQuery 
 - Bootstrap
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
-
-_Note, include this only if you have a license file. GitHub will generate one for you if you want!_
-
 ## Acknowledgement
 Thanks to the team behind Bootstrap that helped me make the table and inputs look as nice as they do.
